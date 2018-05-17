@@ -1,0 +1,1 @@
+# rental_analysis_switzerland_immoscout24
