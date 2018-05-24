@@ -19,7 +19,6 @@ def SingleAptListing_to_table(single_apt_listing):
     apt_price = rest[1:n_splt1 - 2]
     apt_bkmrk = rest[n_splt1 + 10: n_splt2]
 
-
     colnames = ['Id', 'SurfaceArea', 'NumRooms', 'Type', 'Address', 'Description', 'Rent', 'Bookmark', 'Link']
     apt_df = pd.DataFrame(columns=colnames)
     apt_df['Address'] = [apt_address]
@@ -43,7 +42,7 @@ def SingleAptListing_to_table(single_apt_listing):
     if apt_bkmrk == '':
         apt_df['Bookmark'] = 'None'
     else:
-        apt_df['Bookmark'] = apt_bkmrk[1:-1]
+        apt_df['Bookmark'] = apt_bkmrk[:-1]
 
     apt_id = int(apt_link.split('?')[0].split('/')[3])
     apt_df['Id'] = apt_id
@@ -51,4 +50,5 @@ def SingleAptListing_to_table(single_apt_listing):
     apt_type = apt_link.split('-rent-')[0].split('/')[2]
     apt_df['Type'] = apt_type
     apt_df['Link'] = apt_link
+
     return apt_df
