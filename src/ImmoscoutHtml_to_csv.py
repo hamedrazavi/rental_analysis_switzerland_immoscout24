@@ -1,4 +1,4 @@
-# Download the immoscoutHtml, and add the New (not existed before) rental data to the csv file which
+# Download the immoscoutHtml, and add the new (not existed before) rental data to the csv file which
 # includes all previous rental data
 import html2text
 import requests
@@ -41,7 +41,6 @@ if not os.path.exists(csv_today_path):
         splt_listing = c.split("### [")
         for j in range(1, len(splt_listing)):
             single_apt_listing = splt_listing[j]
-            print(single_apt_listing)
             tmdf = SingleAptListing_to_table(single_apt_listing)
             if (df['Id'] == tmdf['Id'][0]).sum() == 0:
                 df_today = pd.concat(objs=[df_today, tmdf], axis = 0).reset_index(drop = True)
