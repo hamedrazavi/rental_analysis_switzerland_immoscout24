@@ -44,7 +44,7 @@ if not os.path.exists(csv_today_path):
             tmdf = SingleAptListing_to_table(single_apt_listing)
             if (df['Id'] == tmdf['Id'][0]).sum() == 0:
                 df_today = pd.concat(objs=[df_today, tmdf], axis = 0).reset_index(drop = True)
-        time.sleep(5)
+        time.sleep(10)
 
     df_today.to_csv(csv_today_path, index = False)
     df = pd.concat(objs=[df_today, df], axis = 0).reset_index(drop = True)
