@@ -11,4 +11,4 @@ SingleAprtListing_to_table.py is used in the above two scripts; its job is to co
 
 rental_analysis_lausanne.ipynb is a jupyter notebook to study, analyse and predict the rental prices based on the datas collected by the scripts listed above
 
-[Here](https://hamedrazavi.github.io/rental_analysis.html) I have explained the process in more details. 
+[Here](https://hamedrazavi.github.io/articles/rental_analysis.html) I have explained the process in more details. 
