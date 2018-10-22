@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Embedding Vega-Lite</title>
-  <script src="https://cdn.jsdelivr.net/npm/vega@4.2.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3.0.0-rc6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3.19.2"></script>
-</head>
-<body>
-
-  <div id="vis"></div>
-
-  <script type="text/javascript">
-    var yourVlSpec = {
+ {
   "config": {"view": {"width": 400, "height": 300}},
   "layer": [
     {
@@ -14525,8 +14512,3 @@
   ],
   "$schema": "https://vega.github.io/schema/vega-lite/v2.6.0.json"
 }
-    vegaEmbed("#vis", yourVlSpec);
-  </script>
-</body>
-</html>
-
