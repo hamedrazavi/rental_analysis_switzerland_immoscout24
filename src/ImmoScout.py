@@ -73,6 +73,7 @@ class ImmoScout:
       c = self.page2text(page_num=i)
       dfi = self.text2df(c)
       id_exists = dfi['Id'].isin(df['Id'])
+      print(id_exists)
       if (id_exists).sum() == 0: # check if the entry already exists
         df = pd.concat(objs=[df, dfi], axis = 0).reset_index(drop = True)
       else:
@@ -83,7 +84,7 @@ class ImmoScout:
 
   def to_csv(self, in_path='', out_path=''):
     """
-    Save the city 'rent' or 'buy' date in 'out_path'. 'out_path' is the path to 
+    Save the city 'rent' or 'buy' data in 'out_path'. 'out_path' is the path to 
     a 'csv' file.  
     If 'in_path' is given the data in 'in_path' is included in the output, and 
     only new online data is added.  
